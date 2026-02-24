@@ -117,3 +117,19 @@ rejectedBtn.addEventListener("click", function () {
     filterCards("rejected");
     setActiveButton(rejectedBtn);
 });
+
+
+const filterButtons = [allBtn, interviewBtn, rejectedBtn];
+
+function setActiveButton(activeBtn) {
+
+    filterButtons.forEach(btn => {
+        btn.classList.remove("bg-blue-600", "text-white");
+        btn.classList.add("bg-white", "text-gray-500");
+    });
+
+    activeBtn.classList.remove("bg-white", "text-gray-500");
+    activeBtn.classList.add("bg-blue-600", "text-white");
+}
+
+setActiveButton(allBtn);
