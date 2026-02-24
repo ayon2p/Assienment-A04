@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwand connect -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="w-[80%] mx-auto space-y-4 mb-5">
+        <h1 class="text-4xl font-bold text-black">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-8">
+            <div class="bg-gray-100 p-4 rounded-xl">
+                <p class="font-medium text-[14px]">Total</p>
+                <h1 id="total" class="bg-linear-to-br from-[#002B70] to-[#0060FA] bg-clip-text font-bold text-2xl">0</h1>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-xl">
+                <p class="font-medium text-[14px]">Interview</p>
+                <h1 id="interviewCount" class="text-green-500 font-bold text-2xl">0</h1>
+            </div>
+            <div class="bg-gray-100 p-4 rounded-xl">
+                <p class="font-medium text-[14px]">Rejected</p>
+                <h1 id="rejectedCount" class="text-red-500 font-bold text-2xl">0</h1>
+            </div>
+        </div>
+    </header>
+    <hr class="mb-5 w-[80%] mx-auto text-[#E6E7E9]">
+<main class="mx-auto w-[80%]">
+ <div class="flex justify-between mb-6">
+    <div class="left-side ">
+       <h1 class="text-2xl font-medium"> Available Jobs</h1>
+    </div>
+    <div class="right-side ">
+       <p id="jobCount" class="text-gray-400 font-medium text-xl">0 jobs</p>
+    </div>
+ </div>
+
+<div class="mb-5">
+    <button id="all-btn" class="bg-white rounded-xl px-6 py-2 text-gray-500 border border-gray-300">All</button>
+    <button id="interview-btn" class="bg-white rounded-xl px-6 py-2 text-gray-500 border border-gray-300">Interview</button>
+    <button id="rejected-btn" class="bg-white rounded-xl px-6 py-2 text-gray-500 border border-gray-300">Rejected</button>
+</div>
