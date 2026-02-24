@@ -36,3 +36,28 @@ function updateCounts() {
 
     filterCards(currentFilter);
 }
+
+function filterCards(type) {
+    const cards = document.querySelectorAll(".card");
+    currentFilter = type;
+    let visible = 0;
+
+    cards.forEach(card => {
+        if (type === "all" || card.classList.contains(type)) {
+            card.style.display = "flex";
+            visible++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    jobCount.textContent = visible + " jobs";
+
+    if (visible === 0) {
+        allCardsSection.style.display = "none";
+        noJobsSection.classList.remove("hidden");
+    } else {
+        allCardsSection.style.display = "block";
+        noJobsSection.classList.add("hidden");
+    }
+}
