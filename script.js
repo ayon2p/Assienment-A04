@@ -61,3 +61,42 @@ function filterCards(type) {
         noJobsSection.classList.add("hidden");
     }
 }
+
+
+function setupCardButtons() {
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        const interviewBtnCard = card.querySelector(".interviewApplied-btn");
+        const rejectedBtnCard = card.querySelector(".rejectedApplied-btn");
+        const statusBtn = card.querySelector(".status-btn");
+
+        if (!interviewBtnCard || !rejectedBtnCard || !statusBtn) return;
+
+        interviewBtnCard.onclick = function () {
+
+            card.classList.remove("rejected");
+            card.classList.add("interview");
+
+            statusBtn.textContent = "INTERVIEW";
+            statusBtn.className = "status-btn bg-green-100 text-green-600 px-4 py-3 font-medium";
+
+            updateCounts();
+        };
+
+        rejectedBtnCard.onclick = function () {
+
+            card.classList.remove("interview");
+            card.classList.add("rejected");
+
+            statusBtn.textContent = "REJECTED";
+            statusBtn.className = "status-btn bg-red-100 text-red-600 px-4 py-3 font-medium";
+
+            updateCounts();
+        };
+    });
+}
+
+setupCardButtons();
