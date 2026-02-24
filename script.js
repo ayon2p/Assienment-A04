@@ -100,3 +100,20 @@ function setupCardButtons() {
 }
 
 setupCardButtons();
+
+
+
+allBtn.addEventListener("click", function () {
+    filterCards("all");
+    setActiveButton(allBtn);
+});
+
+interviewBtn.addEventListener("click", function () {
+    filterCards("interview");
+    setActiveButton(interviewBtn);
+});
+
+rejectedBtn.addEventListener("click", function () {
+    filterCards("rejected");
+    setActiveButton(rejectedBtn);
+});
