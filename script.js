@@ -133,3 +133,21 @@ function setActiveButton(activeBtn) {
 }
 
 setActiveButton(allBtn);
+
+
+
+document.addEventListener("click", function (event) {
+
+    if (event.target.closest(".delate-btn")) {
+
+        const card = e.target.closest(".card");
+        card.remove();
+
+        updateCounts();
+    }
+
+});
+
+setupCardButtons();
+setActiveButton(allBtn);
+updateCounts();
