@@ -6,15 +6,25 @@
 
 =>querySelector is find the first element css selector.
 
+=>querySelectorall is find the all element css selector.
+
+
 
 2. How do you create and insert a new element into the DOM?
 => first of all, i create a new element = document.createElement();
  i design this element with content then i insert into the dom.
 
+
+
 3.  What is Event Bubbling? And how does it work?
-=>
+=>Event Bubbling is a process in the DOM where, when an event occurs on a child element, it propagates upward to its parent elements one by one.
+
+
+
 4. What is Event Delegation in JavaScript? Why is it useful?
 => an event to a parent element to handle events on its child elements.
+
+
 5.What is the difference between preventDefault() and stopPropagation() methods?
  preventDefault(): stop the default action of the element.
  stopPropagation():stop the propagation event from dom.
